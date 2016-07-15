@@ -1,2 +1,2 @@
 # gowebsocket
-An example using gocraft go-web and websockets
+An example using gocraft web and websockets
