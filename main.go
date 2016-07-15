@@ -16,7 +16,7 @@ func main() {
 
 	router := web.New(Context{})
 
-	router.Middleware(web.StaticMiddleware("webroot"))
+	router.Middleware(web.StaticMiddleware("webroot", web.StaticOption{IndexFile:"index.html"}))
 
 	router.Get("/entry", func(rw web.ResponseWriter, req *web.Request) {
 		websocket.Handler(server.OnConnected).ServeHTTP(rw, req.Request)
